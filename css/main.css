@@ -72,6 +72,36 @@ body {
    color: var(--grey);
 }
 
+/* reverse title */
+
+.reverse-section-title-container {
+   display: flex;
+   flex-direction: row-reverse;
+   padding: 2rem 1.5rem;
+}
+
+.reverse-section-title-icon {
+   font-size: 4rem;
+   color: var(--yellow);
+   margin-left: 1rem;
+}
+
+.reverse-section-title-text {
+   line-height: 1.5;
+   border-right: 0.3rem solid var(--grey);
+   padding-right: 1rem;
+}
+
+.reverse-section-title-name {
+   font-size: 2rem;
+   letter-spacing: 0.2rem;
+   text-transform: uppercase;
+}
+
+.reverse-section-title-info {
+   color: var(--grey);
+}
+
 /* end of globals */
 
 /* preloader */
@@ -392,4 +422,70 @@ body {
 .contact-submit:hover {
    background: var(--yellow);
    color: var(--black);
+}
+
+/* projects */
+
+.project {
+   position: relative;
+   background: linear-gradient(var(--yellow), var(--yellow));
+}
+
+.project-img {
+   display: block;
+   width: 100%;
+   transition: all 0.5s linear;
+}
+
+.project:hover .project-img {
+   opacity: 0.5;
+}
+
+.project-icon {
+   font-size: 4rem;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: scale(0);
+   transition: all 0.5s linear;
+   color: var(--yellow);
+   text-decoration: none;
+   cursor: pointer;
+   z-index: 2;
+}
+
+.project:hover .project-icon {
+   transform: scale(1) translate(-50%, -50%);
+}
+
+.project-icon:hover {
+   color: var(--blue);
+}
+
+.project-outline {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   outline: 0.5rem solid var(--black);
+   outline-offset: -2rem;
+   transform: scale(0);
+   transition: all 0.5s linear; 
+}
+
+.project:hover .project-outline {
+   transform: scale(1);
+}
+
+@media screen and (min-width: 768px) {
+   .project {
+      flex: 0 0 50%;
+   }
+}
+
+@media screen and (min-width: 992px) {
+   .project {
+      flex: 0 0 25%;
+   }
 }
