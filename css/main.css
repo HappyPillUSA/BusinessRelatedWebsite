@@ -102,6 +102,18 @@ body {
    color: var(--grey);
 }
 
+.section-title-text-border-blue {
+   border-color: var(--blue);
+}
+
+.section-title-info-blue {
+   color: var(--blue);
+}
+
+.item-margin {
+   margin: 2rem 0;
+}
+
 /* end of globals */
 
 /* preloader */
