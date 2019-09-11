@@ -30,4 +30,15 @@ $(document).ready(function() {
       }
       // other options
    });
+
+   // accordion
+   $(".accordion-btn").click(function() {
+
+      $(".accordion-btn").not(this).removeClass("rotate");
+      $(".accordion-btn").not(this).parent().next().slideUp();
+
+      $(this).toggleClass("rotate");
+
+      $(this).parent().next().slideToggle();
+   });
 });
