@@ -728,3 +728,14 @@ body {
       flex: 0 0 25%;
    }
 }
+
+/* team */
+
+.team-img {
+   display: flex;
+}
+
+.team-img-item {
+   display: block;
+   width: 100%;
+}
