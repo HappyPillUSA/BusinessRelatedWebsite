@@ -96,5 +96,26 @@ $(document).ready(function() {
             $(".team-info-img").attr("src", data[id].img);
          });
 
+         $(".owl-carousel").owlCarousel({
+            loop: false,
+            smartSpeed: 1000,
+            margin: 10,
+            nav: true,
+            responsive: {
+               0: {
+                  items: 1
+               },
+               600: {
+                  items: 1
+               },
+               1000: {
+                  items: 1
+               }
+            }
+         });
+
+         // owl js
+         $(".owl-prev").html('<div><i class="fa fa-chevron-left"></i></div>');
+         $(".owl-next").html('<div><i class="fa fa-chevron-right"></i></div>');
    })();
 });
